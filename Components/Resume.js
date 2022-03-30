@@ -19,7 +19,7 @@ const Resume = () => {
               style={{ color: "#18d26e" }}
               aria-label="resume"
             >
-              <i class="bi bi-file-earmark-arrow-down"></i>
+              <i className="bi bi-file-earmark-arrow-down"></i>
             </a>
           </p>
         </div>
