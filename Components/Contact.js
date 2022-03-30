@@ -34,16 +34,13 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(
-        process.env.NEXT_PUBLIC_BACKEND + "/sendMail",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(mailDetail),
-        }
-      );
+      const response = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(mailDetail),
+      });
       await response.json();
 
       setIsLoading(false);
