@@ -3807,7 +3807,6 @@ fieldset:disabled .btn {
   display: block;
 }
 .navbar {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
