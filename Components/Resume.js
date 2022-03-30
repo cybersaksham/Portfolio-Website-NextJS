@@ -10,7 +10,18 @@ const Resume = () => {
       <div className="container">
         <div className="section-title">
           <h2>Resume</h2>
-          <p>Check My Resume</p>
+          <p>
+            Check My Resume{" "}
+            <a
+              href="/Resume_Saksham.pdf"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#18d26e" }}
+              aria-label="resume"
+            >
+              <i class="bi bi-file-earmark-arrow-down"></i>
+            </a>
+          </p>
         </div>
         <div className="row">
           <div className="col-lg-6">
