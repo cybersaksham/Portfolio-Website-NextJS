@@ -10,7 +10,7 @@ export default function Document() {
         />
       </Head>
       <body>
-        {/* <script defer src="/assets/vendor/purecounter/purecounter.js"></script> */}
+        <script defer src="/assets/vendor/purecounter/purecounter.js"></script>
         <script
           defer
           src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
@@ -23,7 +23,7 @@ export default function Document() {
           defer
           src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"
         ></script>
-        {/* <script defer src="/assets/vendor/swiper/swiper-bundle.min.js"></script> */}
+        <script defer src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
         <script
           defer
           src="/assets/vendor/waypoints/noframework.waypoints.js"
