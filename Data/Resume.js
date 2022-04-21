@@ -28,7 +28,7 @@ const exams = [
 const skills = [
   {
     title: "Languages",
-    items: ["Java", "Python", "C", "CPP", "Javascript", "Dart", "Scheme"],
+    items: ["Java", "Python", "C", "CPP", "Javascript", "Dart", "Scheme", "Assmebly"],
   },
   {
     title: "Platforms",
@@ -38,6 +38,7 @@ const skills = [
       "Android Studio",
       "Flutter",
       "AWS",
+      "Firebase",
       "Vercel",
       "Postmam",
       "Playstore",
@@ -48,8 +49,8 @@ const skills = [
     items: ["React JS", "Next JS", "Flask", "Node JS"],
   },
   {
-    title: "Frameworks",
-    items: ["MongoDB", "MySql", "SQLAlchemy", "Airtable"],
+    title: "Databases",
+    items: ["MongoDB", "MySql", "SQLAlchemy", "Firestore", "Airtable"],
   },
 ];
 
