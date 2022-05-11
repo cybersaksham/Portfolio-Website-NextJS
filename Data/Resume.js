@@ -3,7 +3,7 @@ const education = [
     title: "B.Tech Computer Science",
     time: "2020 - present",
     from: "Malaviya National Institute of Technology, Rajasthan, India",
-    result: "CGPA: 8.69",
+    result: "CGPA: 8.70",
   },
   {
     title: "Senior Secondary (XII)",
@@ -28,7 +28,16 @@ const exams = [
 const skills = [
   {
     title: "Languages",
-    items: ["Java", "Python", "C", "CPP", "Javascript", "Dart", "Scheme", "Assmebly"],
+    items: [
+      "Java",
+      "Python",
+      "C",
+      "CPP",
+      "Javascript",
+      "Dart",
+      "Scheme",
+      "Assmebly",
+    ],
   },
   {
     title: "Platforms",
@@ -65,6 +74,16 @@ const experience = [
       "Frontend in React JS & Backend in Node JS, MongoDB",
     ],
     links: ["https://www.mnityouthfest.in/"],
+  },
+  {
+    title: "Think India MNIT",
+    time: "Nov 2021 - Present",
+    location: "Jaipur, IN",
+    points: [
+      "Incharge of Coding team at Think India MNIT.",
+      "We work on different projects like app development, web development.",
+    ],
+    links: [],
   },
 ];
 
