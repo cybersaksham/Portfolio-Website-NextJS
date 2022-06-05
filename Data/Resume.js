@@ -33,6 +33,7 @@ const skills = [
       "Python",
       "C",
       "CPP",
+      "Motoko",
       "Javascript",
       "Dart",
       "Scheme",
@@ -64,6 +65,17 @@ const skills = [
 ];
 
 const experience = [
+  {
+    title: "Urban Culture",
+    time: "Apr 2022 - May 2022",
+    location: "Jaipur, IN",
+    points: [
+      "Leader of website team at Urban Culture.",
+      "Developed Rest APIs.",
+      "Worked on client android app & admin panel in flutter.",
+    ],
+    links: [],
+  },
   {
     title: "YouthFest MNIT Jaipur",
     time: "Dec 2021 - Jan 2022",

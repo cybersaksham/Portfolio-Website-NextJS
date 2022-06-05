@@ -73,7 +73,7 @@ const Resume = () => {
                   ))}
                   {ex.links.map((pt, j) => (
                     <li key={j}>
-                      <a href={pt} target="_blank" rel="noreferrer">
+                      <a href={pt} target="_blank" rel="noreferrer" className="resumeLinks">
                         {pt}
                       </a>
                     </li>

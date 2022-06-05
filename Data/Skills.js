@@ -1,8 +1,10 @@
 const skills = [
   { title: "Python", value: 95 },
   { title: "React", value: 95 },
+  { title: "Next", value: 90 },
   { title: "Flask", value: 92 },
   { title: "HTML", value: 85 },
+  { title: "Blockchain", value: 80 },
   { title: "Bootstrap", value: 80 },
   { title: "Javascript", value: 80 },
   { title: "C++", value: 80 },
