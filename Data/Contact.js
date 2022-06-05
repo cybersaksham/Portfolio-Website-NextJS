@@ -4,7 +4,7 @@ const contact_links = {
   github: "https://github.com/cybersaksham",
   linkedin: "https://www.linkedin.com/in/saksham-mnit/",
   phone: "+91 9351303570",
-  email: "2020UCP1801@mnit.ac.in",
+  email: "saksham.bindal2004@gmail.com",
   website: "https://www.cybersaksham.co.in",
 };
 
