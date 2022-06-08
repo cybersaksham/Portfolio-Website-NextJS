@@ -59,6 +59,26 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+/* TYPING */
+.typewriter span#mainSpan {
+  padding-right: 5px;
+}
+
+.typewriter span#cursorSpan {
+  border-bottom: none !important;
+  border-right: solid #18d26e 2px;
+  margin-left: 5px;
+}
+
+@keyframes cursor {
+  from {
+    border-right-color: #18d26e;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
