@@ -8,8 +8,9 @@ const Header = () => {
         <h1>
           <p>{about.name}</p>
         </h1>
-        <h2>
-          I'm <span>{about.about}</span>
+        <h2 className="typewriter">
+          I'm <span id="mainSpan" data-text={about.about}></span>
+          <span id="cursorSpan"></span>
         </h2>
         <nav id="navbar" className="navbar">
           <ul>
