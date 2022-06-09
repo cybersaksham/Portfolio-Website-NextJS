@@ -29,11 +29,6 @@ const Header = () => {
                 Resume
               </a>
             </li>
-            {/* <li>
-              <a className="nav-link" href="#services">
-                Services
-              </a>
-            </li> */}
             <li>
               <a className="nav-link" href="#portfolio">
                 Portfolio

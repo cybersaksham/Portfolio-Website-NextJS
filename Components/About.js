@@ -22,7 +22,10 @@ const About = () => {
             />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>{about.about}</h3>
+            <h3 className="typewriter">
+              <span id="mainSpan" data-text={about.about}></span>
+              <span id="cursorSpan"></span>
+            </h3>
             <p className="fst-italic">{about.bio}</p>
             <div className="row" style={{ overflowX: "auto" }}>
               <div className="col-lg-6">

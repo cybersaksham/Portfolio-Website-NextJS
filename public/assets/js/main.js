@@ -254,71 +254,75 @@
 })();
 
 // TYPING
-var span = document.querySelector(".typewriter span");
+var typwriters = document.getElementsByClassName("typewriter");
 
-if (span) {
-  var textArr = span.getAttribute("data-text").split(", ");
-  var maxTextIndex = textArr.length;
+Array.from(typwriters).forEach((typer) => {
+  var span = typer.querySelector("span");
 
-  var sPerChar = 0.12;
-  var sPerCharDlt = 0.06;
-  var sBetweenWord = 1.5;
-  var textIndex = 0;
+  if (span) {
+    var textArr = span.getAttribute("data-text").split(", ");
+    var maxTextIndex = textArr.length;
 
-  typing(0, textIndex, textArr[textIndex]);
-}
+    var sPerChar = 0.12;
+    var sPerCharDlt = 0.06;
+    var sBetweenWord = 1.5;
+    var textIndex = 0;
 
-function typing(startIndex, textIndex, text) {
-  var charIndex = startIndex;
-  var maxCharIndex = text.length - 1;
-
-  var typeInterval = setInterval(function () {
-    span.innerHTML += text[charIndex];
-    if (charIndex == maxCharIndex) {
-      clearInterval(typeInterval);
-      var css = document.createElement("style");
-      css.type = "text/css";
-      css.innerHTML =
-        ".typewriter span#cursorSpan {animation: cursor 0.8s ease-in-out infinite; }";
-      document.body.appendChild(css);
-      setTimeout(function () {
-        deleting(textIndex, text);
-        document.body.removeChild(css);
-      }, sBetweenWord * 1000);
-    } else {
-      charIndex += 1;
-    }
-  }, sPerChar * 1000);
-}
-
-function deleting(textIndex, text) {
-  var nextIndex = textIndex + 1 == maxTextIndex ? 0 : textIndex + 1;
-  var commonLength = commonPrefixUtil(textArr[textIndex], textArr[nextIndex]);
-  var minCharIndex = commonLength;
-  var charIndex = text.length - 1;
-
-  var typeInterval = setInterval(function () {
-    span.innerHTML = text.substr(0, charIndex);
-    if (charIndex == minCharIndex) {
-      clearInterval(typeInterval);
-      typing(commonLength, nextIndex, textArr[nextIndex]);
-    } else {
-      charIndex -= 1;
-    }
-  }, sPerCharDlt * 1000);
-}
-
-function commonPrefixUtil(str1, str2) {
-  let result = "";
-  let n1 = str1.length;
-  let n2 = str2.length;
-
-  // Compare str1 and str2
-  for (let i = 0, j = 0; i <= n1 - 1 && j <= n2 - 1; i++, j++) {
-    if (str1[i] != str2[j]) {
-      break;
-    }
-    result += str1[i];
+    typing(0, textIndex, textArr[textIndex]);
   }
-  return result.length;
-}
+
+  function typing(startIndex, textIndex, text) {
+    var charIndex = startIndex;
+    var maxCharIndex = text.length - 1;
+
+    var typeInterval = setInterval(function () {
+      span.innerHTML += text[charIndex];
+      if (charIndex == maxCharIndex) {
+        clearInterval(typeInterval);
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML =
+          ".typewriter span#cursorSpan {animation: cursor 0.8s ease-in-out infinite; }";
+        document.body.appendChild(css);
+        setTimeout(function () {
+          deleting(textIndex, text);
+          document.body.removeChild(css);
+        }, sBetweenWord * 1000);
+      } else {
+        charIndex += 1;
+      }
+    }, sPerChar * 1000);
+  }
+
+  function deleting(textIndex, text) {
+    var nextIndex = textIndex + 1 == maxTextIndex ? 0 : textIndex + 1;
+    var commonLength = commonPrefixUtil(textArr[textIndex], textArr[nextIndex]);
+    var minCharIndex = commonLength;
+    var charIndex = text.length - 1;
+
+    var typeInterval = setInterval(function () {
+      span.innerHTML = text.substr(0, charIndex);
+      if (charIndex == minCharIndex) {
+        clearInterval(typeInterval);
+        typing(commonLength, nextIndex, textArr[nextIndex]);
+      } else {
+        charIndex -= 1;
+      }
+    }, sPerCharDlt * 1000);
+  }
+
+  function commonPrefixUtil(str1, str2) {
+    let result = "";
+    let n1 = str1.length;
+    let n2 = str2.length;
+
+    // Compare str1 and str2
+    for (let i = 0, j = 0; i <= n1 - 1 && j <= n2 - 1; i++, j++) {
+      if (str1[i] != str2[j]) {
+        break;
+      }
+      result += str1[i];
+    }
+    return result.length;
+  }
+});
