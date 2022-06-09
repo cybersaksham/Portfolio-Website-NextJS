@@ -5,9 +5,7 @@ const Header = () => {
   return (
     <header id="header">
       <div className="container">
-        <h1>
-          <p>{about.name}</p>
-        </h1>
+        <h1>{about.name}</h1>
         <h2 className="typewriter">
           I'm <span id="mainSpan" data-text={about.about}></span>
           <span id="cursorSpan"></span>
