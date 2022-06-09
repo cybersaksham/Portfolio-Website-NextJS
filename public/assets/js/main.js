@@ -255,15 +255,18 @@
 
 // TYPING
 var span = document.querySelector(".typewriter span");
-var textArr = span.getAttribute("data-text").split(", ");
-var maxTextIndex = textArr.length;
 
-var sPerChar = 0.12;
-var sPerCharDlt = 0.06;
-var sBetweenWord = 1.5;
-var textIndex = 0;
+if (span) {
+  var textArr = span.getAttribute("data-text").split(", ");
+  var maxTextIndex = textArr.length;
 
-typing(0, textIndex, textArr[textIndex]);
+  var sPerChar = 0.12;
+  var sPerCharDlt = 0.06;
+  var sBetweenWord = 1.5;
+  var textIndex = 0;
+
+  typing(0, textIndex, textArr[textIndex]);
+}
 
 function typing(startIndex, textIndex, text) {
   var charIndex = startIndex;
