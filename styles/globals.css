@@ -5,6 +5,22 @@
 * License: https://bootstrapmade.com/license/
 */
 
+/* SCROLLBAR */
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0.3em;
+    height: 0.3em;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232222;
+    mix-blend-mode: exclusion;
+  }
+  ::-webkit-scrollbar-track {
+    background: #535353;
+  }
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/

@@ -1,4 +1,5 @@
 import about from "../Data/About";
+import counterItems from "../Data/Counter";
 import contact_links from "../Data/Contact";
 import skills from "../Data/Skills";
 
@@ -21,7 +22,10 @@ const About = () => {
             />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>{about.about}</h3>
+            <h3 className="typewriter">
+              <span id="mainSpan" data-text={about.about}></span>
+              <span id="cursorSpan"></span>
+            </h3>
             <p className="fst-italic">{about.bio}</p>
             <div className="row" style={{ overflowX: "auto" }}>
               <div className="col-lg-6">
@@ -62,58 +66,24 @@ const About = () => {
           </div>
         </div>
       </div>
-      {/* <div className="counts container">
+      <div className="counts container">
         <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <div className="count-box">
-              <i className="bi bi-emoji-smile" />
-              <span
-                data-purecounter-start={0}
-                data-purecounter-end={232}
-                data-purecounter-duration={1}
-                className="purecounter"
-              />
-              <p>Happy Clients</p>
+          {counterItems.map((item, i) => (
+            <div key={i} className="col-lg-3 col-md-6 mt-5 mt-lg-0">
+              <div className="count-box">
+                <i className={item.icon} />
+                <span
+                  data-purecounter-start={0}
+                  data-purecounter-end={item.count}
+                  data-purecounter-duration={item.duration}
+                  className="purecounter"
+                />
+                <p>{item.title}</p>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div className="count-box">
-              <i className="bi bi-journal-richtext" />
-              <span
-                data-purecounter-start={0}
-                data-purecounter-end={521}
-                data-purecounter-duration={1}
-                className="purecounter"
-              />
-              <p>Projects</p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="count-box">
-              <i className="bi bi-headset" />
-              <span
-                data-purecounter-start={0}
-                data-purecounter-end={1463}
-                data-purecounter-duration={1}
-                className="purecounter"
-              />
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="count-box">
-              <i className="bi bi-award" />
-              <span
-                data-purecounter-start={0}
-                data-purecounter-end={24}
-                data-purecounter-duration={1}
-                className="purecounter"
-              />
-              <p>Awards</p>
-            </div>
-          </div>
+          ))}
         </div>
-      </div> */}
+      </div>
       <div className="skills container">
         <div className="section-title">
           <h2>Skills</h2>
