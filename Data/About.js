@@ -1,6 +1,6 @@
 let currDate = new Date();
 let year = currDate.getFullYear() - 2004;
-let month = currDate.getMonth() - 8;
+let month = currDate.getMonth() - 7;
 let date = currDate.getDate() - 19;
 
 if (month < 0) year -= 1;
