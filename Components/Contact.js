@@ -46,7 +46,7 @@ const Contact = () => {
       setIsLoading(false);
       if (response.status === 200) setIsSuccess(true);
       else setIsError(true);
-    } catch (e) {}
+    } catch (e) { }
 
     tOut = setTimeout(() => {
       setIsSuccess(false);
@@ -200,7 +200,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-    </section>
+    </section >
   );
 };
 
