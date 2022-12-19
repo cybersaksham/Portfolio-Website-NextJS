@@ -39,6 +39,47 @@ const Resume = () => {
               </ul>
               <p />
             </div>
+            <h3 className="resume-title">Experience</h3>
+            {Array.from(experience).map((ex, i) => (
+              <div className="resume-item" key={i}>
+                <h4>{ex.company}</h4>
+                <h5>{ex.title}</h5>
+                <p>
+                  <em>
+                    <i className="bx bx-time" style={{ color: "#18d26e" }} color="#18d26e" />
+                    {" "}{ex.time}
+                    <br />
+                    <i className="bx bx-map" style={{ color: "#18d26e" }} color="#18d26e" />
+                    {" "}{ex.location}
+                  </em>
+                </p>
+                <ul>
+                  {ex.points.map((pt, j) => (
+                    <li key={j}>{pt}</li>
+                  ))}
+                  {ex.links.map((pt, j) => (
+                    <li key={j}>
+                      <a href={pt} target="_blank" rel="noreferrer" className="resumeLinks">
+                        {pt}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="col-lg-6">
+            <h3 className="resume-title">Education</h3>
+            {Array.from(education).map((ed, i) => (
+              <div className="resume-item" key={i}>
+                <h4>{ed.title}</h4>
+                <h5>{ed.time}</h5>
+                <p>
+                  <em>{ed.from}</em>
+                </p>
+                <p>{ed.result}</p>
+              </div>
+            ))}
             <h3 className="resume-title">Skills</h3>
             {Array.from(skills).map((sk, i) => (
               <div className="resume-item" key={i}>
@@ -55,41 +96,6 @@ const Resume = () => {
               <div className="resume-item" key={i}>
                 <h4>{ex.title}</h4>
                 <h5>{ex.result}</h5>
-              </div>
-            ))}
-          </div>
-          <div className="col-lg-6">
-            <h3 className="resume-title">Experience</h3>
-            {Array.from(experience).map((ex, i) => (
-              <div className="resume-item" key={i}>
-                <h4>{ex.title}</h4>
-                <h5>{ex.time}</h5>
-                <p>
-                  <em>{ex.location}</em>
-                </p>
-                <ul>
-                  {ex.points.map((pt, j) => (
-                    <li key={j}>{pt}</li>
-                  ))}
-                  {ex.links.map((pt, j) => (
-                    <li key={j}>
-                      <a href={pt} target="_blank" rel="noreferrer" className="resumeLinks">
-                        {pt}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-            <h3 className="resume-title">Education</h3>
-            {Array.from(education).map((ed, i) => (
-              <div className="resume-item" key={i}>
-                <h4>{ed.title}</h4>
-                <h5>{ed.time}</h5>
-                <p>
-                  <em>{ed.from}</em>
-                </p>
-                <p>{ed.result}</p>
               </div>
             ))}
           </div>
