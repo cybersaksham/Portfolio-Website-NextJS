@@ -3,7 +3,7 @@ const education = [
     title: "B.Tech Computer Science",
     time: "2020 - present",
     from: "Malaviya National Institute of Technology, Rajasthan, India",
-    result: "CGPA: 8.70",
+    result: "CGPA: 8.57",
   },
   {
     title: "Senior Secondary (XII)",
@@ -66,9 +66,29 @@ const skills = [
 
 const experience = [
   {
-    title: "Urban Culture",
+    title: "Software Engineer Intern",
+    company: "Atlassian",
+    time: "In summer 2023",
+    location: "Remote + Bangalore",
+    points: [],
+    links: [],
+  },
+  {
+    title: "Maths Expert",
+    company: "Chegg Inc.",
+    time: "Nov 2022 - Present",
+    location: "Remote",
+    points: [
+      "Basic maths expert at Chegg Inc.",
+      "Solve math questions daily."
+    ],
+    links: [],
+  },
+  {
+    title: "Flutter App Developer",
+    company: "Urban Culture",
     time: "Apr 2022 - May 2022",
-    location: "Jaipur, IN",
+    location: "Remote",
     points: [
       "Leader of website team at Urban Culture.",
       "Developed Rest APIs.",
@@ -77,9 +97,10 @@ const experience = [
     links: [],
   },
   {
-    title: "YouthFest MNIT Jaipur",
+    title: "Web Developer",
+    company: "YouthFest MNIT Jaipur",
     time: "Dec 2021 - Jan 2022",
-    location: "Jaipur, IN",
+    location: "Remote",
     points: [
       "Created a website for MNIT YouthFest 2022",
       "Leader of team of 6 people",
@@ -88,8 +109,9 @@ const experience = [
     links: ["https://www.mnityouthfest.in/"],
   },
   {
-    title: "Think India MNIT",
-    time: "Nov 2021 - Present",
+    title: "Web Developer & Incharge",
+    company: "Think India MNIT",
+    time: "Nov 2021 - Oct 2022",
     location: "Jaipur, IN",
     points: [
       "Incharge of Coding team at Think India MNIT.",

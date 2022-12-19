@@ -3,7 +3,8 @@ const contact_links = {
   instagram: "https://www.instagram.com/saksham.1908",
   github: "https://github.com/cybersaksham",
   linkedin: "https://www.linkedin.com/in/cybersaksham/",
-  phone: "+91 9351303570",
+  // phone: "+91 9351303570",
+  phone: "+91 **********",
   email: "saksham.bindal2004@gmail.com",
   website: "https://www.cybersaksham.co.in",
 };
