@@ -13,6 +13,10 @@ const filters = [
   android_filter,
 ];
 
+const generateFilterString = (...fils) => {
+  return Array.from(fils).join(" ");
+};
+
 // URL Types
 const git = "Github";
 const playstore = "Playstore";
@@ -33,9 +37,9 @@ const cat_types = {
 const projects = [
   {
     name: "Face Detector",
-    filter: ai_filter + " " + desktop_filter,
+    filter: generateFilterString(ai_filter, desktop_filter),
     img: "face_detector",
-    slides: 2,
+    slides: 1,
     desc: "It is an AI project to detect your face & eyes either by live webcam, uploaded photo or video.",
     urls: [
       [[git], "https://github.com/cybersaksham/Face-Detector"],
@@ -47,9 +51,9 @@ const projects = [
   },
   {
     name: "Chess Game",
-    filter: game_filter + " " + desktop_filter,
+    filter: generateFilterString(game_filter, desktop_filter),
     img: "chess_game",
-    slides: 3,
+    slides: 1,
     desc: "A good chess game made in python. It has almost all functions which we have in original chess game.",
     urls: [
       [[git], "https://github.com/cybersaksham/Chess-Game"],
@@ -61,9 +65,9 @@ const projects = [
   },
   {
     name: "Expense Planner",
-    filter: android_filter,
+    filter: generateFilterString(android_filter),
     img: "expense_manager",
-    slides: 2,
+    slides: 1,
     desc: "Android app made by flutter to manage your daily expenses in a right way. You can also see data by charts.",
     urls: [
       [[git], "https://github.com/cybersaksham/Expense-Manager"],
@@ -74,16 +78,8 @@ const projects = [
     ],
   },
   {
-    name: "2048 Game",
-    filter: game_filter + " " + desktop_filter,
-    img: "2048_game",
-    slides: 2,
-    desc: "2048 GUI game made in python.",
-    urls: [[[git], "https://github.com/cybersaksham/2048-Game"]],
-  },
-  {
     name: "News Website",
-    filter: web_filter,
+    filter: generateFilterString(web_filter),
     img: "news_website",
     slides: 4,
     desc: "News website made in react js. Watch latest news in different categories",

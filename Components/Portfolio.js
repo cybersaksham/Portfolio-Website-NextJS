@@ -1,4 +1,5 @@
 import portfolio from "../Data/Portfolio";
+import ValidImage from "./ValidImage";
 
 const Portfolio = () => {
   const { filters, projects } = portfolio;
@@ -31,10 +32,15 @@ const Portfolio = () => {
               key={i}
             >
               <div className="portfolio-wrap">
-                <img
-                  src={`/Gallery/Projects/${project.img}/main.webp`}
+                <ValidImage
                   className="img-fluid"
                   alt=""
+                  style={{
+                    height: "325px",
+                    width: "700px",
+                  }}
+                  src={`/Gallery/Projects/${project.img}/0.webp`}
+                  fallbackSrc="/Gallery/404.webp"
                 />
                 <div className="portfolio-info">
                   <span
@@ -48,7 +54,7 @@ const Portfolio = () => {
                   </span>
                   <div className="portfolio-links">
                     <a
-                      href={`/Gallery/Projects/${project.img}/main.webp`}
+                      href={`/Gallery/Projects/${project.img}/0.webp`}
                       data-gallery="portfolioGallery"
                       className="portfolio-lightbox"
                       title={project.name}

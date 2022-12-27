@@ -13,7 +13,7 @@ const Detail = ({ id }) => {
     <div id="portfolio-details" className="portfolio-details">
       <div
         className="container"
-        style={{ border: "2px solid white", borderRadius: "10px" }}
+        // style={{ border: "2px solid white", borderRadius: "10px" }}
       >
         {project && (
           <div className="row">
@@ -25,6 +25,10 @@ const Detail = ({ id }) => {
                       <img
                         src={`/Gallery/Projects/${project.img}/${i}.webp`}
                         alt=""
+                        style={{
+                          height: "550px",
+                          width: "700px",
+                        }}
                       />
                     </div>
                   ))}
