@@ -50,8 +50,10 @@ const Detail = ({ id }) => {
                     </a>
                   </li>
                 ))}
+                {Array.from(project.desc).map((desc, i) => (
+                  <li key={i}>{desc}</li>
+                ))}
               </ul>
-              <p>{project.desc}</p>
             </div>
           </div>
         )}

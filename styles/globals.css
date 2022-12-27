@@ -894,12 +894,15 @@ section .container {
   margin-bottom: 20px;
 }
 .portfolio-details .portfolio-info ul {
-  list-style: none;
+  /* list-style: none; */
   padding: 0;
   font-size: 15px;
 }
 .portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
+}
+.portfolio-details .portfolio-info ul li a {
+  color: #18d26e;
 }
 .portfolio-details .portfolio-info p {
   font-size: 15px;
