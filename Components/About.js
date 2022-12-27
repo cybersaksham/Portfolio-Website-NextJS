@@ -14,7 +14,7 @@ const About = () => {
         <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
             <img
-              src="/Gallery/saksham.webp"
+              src="/Gallery/pic.webp"
               className="img-fluid"
               alt=""
               style={{ borderRadius: "500px" }}
