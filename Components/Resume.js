@@ -13,7 +13,7 @@ const Resume = () => {
           <p>
             Check My Resume{" "}
             <a
-              href="/Resume_Saksham.pdf"
+              href="/Resume.pdf"
               target="_blank"
               rel="noreferrer"
               style={{ color: "#18d26e" }}
