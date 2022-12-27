@@ -4,6 +4,7 @@ const web_filter = "filter-web";
 const desktop_filter = "filter-desktop";
 const ai_filter = "filter-ai";
 const android_filter = "filter-android";
+const blockchain_filter = "filter-blockchain";
 
 const filters = [
   game_filter,
@@ -11,14 +12,18 @@ const filters = [
   desktop_filter,
   ai_filter,
   android_filter,
+  blockchain_filter,
 ];
+
+const generateFilterString = (...fils) => {
+  return Array.from(fils).join(" ");
+};
 
 // URL Types
 const git = "Github";
 const playstore = "Playstore";
 const setup = "Setup";
-// const apk = "Apk";
-// const web = "Website";
+const web = "Website";
 
 // Category Types
 const cat_types = {
@@ -27,16 +32,20 @@ const cat_types = {
   [desktop_filter]: "Desktop App",
   [ai_filter]: "Artificial Intelligence",
   [android_filter]: "Android App",
+  [blockchain_filter]: "Blockchain",
 };
 
 // Projects
 const projects = [
   {
     name: "Face Detector",
-    filter: ai_filter + " " + desktop_filter,
+    filter: generateFilterString(ai_filter, desktop_filter),
     img: "face_detector",
-    slides: 2,
-    desc: "It is an AI project to detect your face & eyes either by live webcam, uploaded photo or video.",
+    slides: 1,
+    desc: [
+      "It is an AI project to detect your face & eyes either by live webcam, uploaded photo or video.",
+      "Made in python using OpenCV.",
+    ],
     urls: [
       [[git], "https://github.com/cybersaksham/Face-Detector"],
       [
@@ -47,10 +56,13 @@ const projects = [
   },
   {
     name: "Chess Game",
-    filter: game_filter + " " + desktop_filter,
+    filter: generateFilterString(game_filter, desktop_filter),
     img: "chess_game",
-    slides: 3,
-    desc: "A good chess game made in python. It has almost all functions which we have in original chess game.",
+    slides: 1,
+    desc: [
+      "A PvP chess game made in python.",
+      "It has almost all functions which we have in original chess game.",
+    ],
     urls: [
       [[git], "https://github.com/cybersaksham/Chess-Game"],
       [
@@ -61,10 +73,13 @@ const projects = [
   },
   {
     name: "Expense Planner",
-    filter: android_filter,
+    filter: generateFilterString(android_filter),
     img: "expense_manager",
-    slides: 2,
-    desc: "Android app made by flutter to manage your daily expenses in a right way. You can also see data by charts.",
+    slides: 1,
+    desc: [
+      "Android app made by flutter to manage your daily expenses in a right way.",
+      "You can also see data by charts.",
+    ],
     urls: [
       [[git], "https://github.com/cybersaksham/Expense-Manager"],
       [
@@ -74,20 +89,79 @@ const projects = [
     ],
   },
   {
-    name: "2048 Game",
-    filter: game_filter + " " + desktop_filter,
-    img: "2048_game",
-    slides: 2,
-    desc: "2048 GUI game made in python.",
-    urls: [[[git], "https://github.com/cybersaksham/2048-Game"]],
+    name: "INC",
+    filter: generateFilterString(web_filter, blockchain_filter),
+    img: "inc",
+    slides: 1,
+    desc: [
+      "INC(Indian National Coin) is a demo crypto-currency made in motoko.",
+      "You can view, transfer & receive INC coins on this website",
+    ],
+    urls: [[[git], "https://github.com/cybersaksham/INC"]],
+  },
+  {
+    name: "OpenINC",
+    filter: generateFilterString(web_filter, blockchain_filter),
+    img: "openinc",
+    slides: 1,
+    desc: [
+      "It is an NFT minting and trading platform",
+      "You can trade NFTs here using INC coin",
+    ],
+    urls: [[[git], "https://github.com/cybersaksham/OpenINC"]],
   },
   {
     name: "News Website",
-    filter: web_filter,
+    filter: generateFilterString(web_filter),
     img: "news_website",
-    slides: 4,
-    desc: "News website made in react js. Watch latest news in different categories",
+    slides: 1,
+    desc: [
+      "News website made in react js.",
+      "Watch latest news in different categories",
+    ],
     urls: [[[git], "https://github.com/cybersaksham/React-News-App"]],
+  },
+  {
+    name: "Coffee Stores",
+    filter: generateFilterString(web_filter),
+    img: "coffee_stores",
+    slides: 1,
+    desc: [
+      "It is a tutorial website to find coffee stores nearby your location.",
+      "Made in Next JS and hosted on Vercel.",
+      "It is superfast and a high SEO website",
+    ],
+    urls: [
+      [[git], "https://github.com/cybersaksham/Next-Coffee-Store"],
+      [[web], "https://next-coffee-stores.cybersaksham.co.in/"],
+    ],
+  },
+  {
+    name: "DSA Questions",
+    filter: generateFilterString(web_filter),
+    img: "dsa_questions",
+    slides: 1,
+    desc: [
+      "It is a website where you can solve Striver sheet while having complete track record of your progress.",
+      "Made in React JS and hosted on Vercel.",
+      "Data is saved on localhost. Database will be added soon.",
+    ],
+    urls: [
+      [[git], "https://github.com/cybersaksham/DSA-Questions-Website"],
+      [[web], "https://dsa-questions.cybersaksham.co.in/"],
+    ],
+  },
+  {
+    name: "React iNoteBook",
+    filter: generateFilterString(web_filter),
+    img: "react-inotebook",
+    slides: 1,
+    desc: [
+      "It is a website where you can create your notes and view them any time.",
+      "Made in React JS and backend in Node JS.",
+      "Complete data is saved on MongoDB database",
+    ],
+    urls: [[[git], "https://github.com/cybersaksham/React-iNoteBook"]],
   },
 ];
 
