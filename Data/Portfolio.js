@@ -40,7 +40,7 @@ const projects = [
   {
     name: "Face Detector",
     filter: generateFilterString(ai_filter, desktop_filter),
-    img: "face_detector",
+    img: "face_detectorf",
     slides: 1,
     desc: [
       "It is an AI project to detect your face & eyes either by live webcam, uploaded photo or video.",
