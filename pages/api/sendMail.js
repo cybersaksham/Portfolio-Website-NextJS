@@ -95,7 +95,7 @@ export default async function sendMail(req, res) {
         html: `Message from ${name} ${email}<br/><br/><b>${message}</b>`,
       };
 
-      transporter.sendMail(mailOptions2, function (err, data) { });
+      transporter.sendMail(mailOptions2, function (err, data) {});
 
       transporter.sendMail(mailOptions, function (err, data) {
         if (err) {

@@ -6,10 +6,6 @@ const Portfolio = () => {
   const { filters, projects } = portfolio;
   const [imageUrls, setImageUrls] = useState(projects.map((pr) => true));
 
-  useEffect(() => {
-    console.log(imageUrls);
-  }, [imageUrls]);
-
   return (
     <section id="portfolio" className="portfolio">
       <div className="container">
