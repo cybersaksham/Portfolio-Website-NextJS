@@ -3,7 +3,7 @@ const education = [
     title: "B.Tech Computer Science",
     time: "2020 - present",
     from: "Malaviya National Institute of Technology, Rajasthan, India",
-    result: "CGPA: 8.57",
+    result: "CGPA: 8.44",
   },
   {
     title: "Senior Secondary (XII)",
@@ -41,7 +41,7 @@ const skills = [
     ],
   },
   {
-    title: "Platforms",
+    title: "Platforms & Tools",
     items: [
       "Unix",
       "Git",
@@ -52,6 +52,7 @@ const skills = [
       "Vercel",
       "Postmam",
       "Playstore",
+      "OpenGL",
     ],
   },
   {
@@ -66,6 +67,17 @@ const skills = [
 
 const experience = [
   {
+    title: "Founder & CTO",
+    company: "Plopdop Pvt Ltd",
+    time: "Jan 2023 - Present",
+    points: [
+      "A video streaming platform where creator can start monetizing instantly.",
+      "Creator can also mint their videos into NFT and sell them",
+      "Completely MADE IN INDIA product",
+    ],
+    links: ["https://plopdop.com/"],
+  },
+  {
     title: "Software Engineer Intern",
     company: "Atlassian",
     time: "In summer 2023",
@@ -78,10 +90,7 @@ const experience = [
     company: "Chegg Inc.",
     time: "Nov 2022 - Present",
     location: "Remote",
-    points: [
-      "Basic maths expert at Chegg Inc.",
-      "Solve math questions daily."
-    ],
+    points: ["Basic maths expert at Chegg Inc.", "Solve math questions daily."],
     links: [],
   },
   {
