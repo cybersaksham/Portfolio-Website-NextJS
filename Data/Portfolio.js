@@ -24,6 +24,7 @@ const git = "Github";
 const playstore = "Playstore";
 const setup = "Setup";
 const web = "Website";
+const firefox = "Firefox";
 
 // Category Types
 const cat_types = {
@@ -109,6 +110,20 @@ const projects = [
       "You can trade NFTs here using INC coin",
     ],
     urls: [[[git], "https://github.com/cybersaksham/OpenINC"]],
+  },
+  {
+    name: "QuizGPT",
+    filter: generateFilterString(web_filter, ai_filter),
+    img: "quizgpt",
+    slides: 1,
+    desc: [
+      "It is a browser extension which solves your google form quiz in seconds",
+      "Based on GPT-4 model developed by OpenAI",
+    ],
+    urls: [
+      [[git], "https://github.com/cybersaksham/QuizGPT"],
+      [[firefox], "https://addons.mozilla.org/en-US/firefox/addon/quiz-gpt/"],
+    ],
   },
   {
     name: "News Website",

@@ -5,6 +5,129 @@ import resume from "../Data/Resume";
 const Resume = () => {
   const { education, exams, skills, experience } = resume;
 
+  const Summary = () => {
+    return (
+      <>
+        <h3 className="resume-title">Summary</h3>
+        <div className="resume-item pb-0">
+          <h4>{about.name}</h4>
+          <p>
+            <em>{about.longBio}</em>
+          </p>
+          <p></p>
+          <ul>
+            <li>{about.city}</li>
+            <li>{contact_links.phone}</li>
+            <li>{contact_links.email}</li>
+          </ul>
+          <p />
+        </div>
+      </>
+    );
+  };
+
+  const Education = () => {
+    return (
+      <>
+        <h3 className="resume-title">Education</h3>
+        {Array.from(education).map((ed, i) => (
+          <div className="resume-item" key={i}>
+            <h4>{ed.title}</h4>
+            <h5>{ed.time}</h5>
+            <p>
+              <em>{ed.from}</em>
+            </p>
+            <p>{ed.result}</p>
+          </div>
+        ))}
+      </>
+    );
+  };
+
+  const Skills = () => {
+    return (
+      <>
+        <h3 className="resume-title">Skills</h3>
+        {Array.from(skills).map((sk, i) => (
+          <div className="resume-item" key={i}>
+            <h4>{sk.title}</h4>
+            {sk.items.map((it, j) => (
+              <h5 style={{ margin: "5px" }} key={j}>
+                {it}
+              </h5>
+            ))}
+          </div>
+        ))}
+      </>
+    );
+  };
+
+  const Exams = () => {
+    return (
+      <>
+        <h3 className="resume-title">Exams</h3>
+        {Array.from(exams).map((ex, i) => (
+          <div className="resume-item" key={i}>
+            <h4>{ex.title}</h4>
+            <h5>{ex.result}</h5>
+          </div>
+        ))}
+      </>
+    );
+  };
+
+  const Experience = () => {
+    return (
+      <>
+        <h3 className="resume-title">Experience</h3>
+        {Array.from(experience).map((ex, i) => (
+          <div className="resume-item" key={i}>
+            <h4>{ex.company}</h4>
+            <h5>{ex.title}</h5>
+            <p>
+              <em>
+                <i
+                  className="bx bx-time"
+                  style={{ color: "#18d26e" }}
+                  color="#18d26e"
+                />{" "}
+                {ex.time}
+                <br />
+                {ex.location && (
+                  <>
+                    <i
+                      className="bx bx-map"
+                      style={{ color: "#18d26e" }}
+                      color="#18d26e"
+                    />{" "}
+                    {ex.location}
+                  </>
+                )}
+              </em>
+            </p>
+            <ul>
+              {ex.points.map((pt, j) => (
+                <li key={j}>{pt}</li>
+              ))}
+              {ex.links.map((pt, j) => (
+                <li key={j}>
+                  <a
+                    href={pt}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="resumeLinks"
+                  >
+                    {pt}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </>
+    );
+  };
+
   return (
     <section id="resume" className="resume" style={{ overflowX: "auto" }}>
       <div className="container">
@@ -25,79 +148,13 @@ const Resume = () => {
         </div>
         <div className="row">
           <div className="col-lg-6">
-            <h3 className="resume-title">Summary</h3>
-            <div className="resume-item pb-0">
-              <h4>{about.name}</h4>
-              <p>
-                <em>{about.longBio}</em>
-              </p>
-              <p></p>
-              <ul>
-                <li>{about.city}</li>
-                <li>{contact_links.phone}</li>
-                <li>{contact_links.email}</li>
-              </ul>
-              <p />
-            </div>
-            <h3 className="resume-title">Experience</h3>
-            {Array.from(experience).map((ex, i) => (
-              <div className="resume-item" key={i}>
-                <h4>{ex.company}</h4>
-                <h5>{ex.title}</h5>
-                <p>
-                  <em>
-                    <i className="bx bx-time" style={{ color: "#18d26e" }} color="#18d26e" />
-                    {" "}{ex.time}
-                    <br />
-                    <i className="bx bx-map" style={{ color: "#18d26e" }} color="#18d26e" />
-                    {" "}{ex.location}
-                  </em>
-                </p>
-                <ul>
-                  {ex.points.map((pt, j) => (
-                    <li key={j}>{pt}</li>
-                  ))}
-                  {ex.links.map((pt, j) => (
-                    <li key={j}>
-                      <a href={pt} target="_blank" rel="noreferrer" className="resumeLinks">
-                        {pt}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <Summary />
+            <Education />
+            <Skills />
+            <Exams />
           </div>
           <div className="col-lg-6">
-            <h3 className="resume-title">Education</h3>
-            {Array.from(education).map((ed, i) => (
-              <div className="resume-item" key={i}>
-                <h4>{ed.title}</h4>
-                <h5>{ed.time}</h5>
-                <p>
-                  <em>{ed.from}</em>
-                </p>
-                <p>{ed.result}</p>
-              </div>
-            ))}
-            <h3 className="resume-title">Skills</h3>
-            {Array.from(skills).map((sk, i) => (
-              <div className="resume-item" key={i}>
-                <h4>{sk.title}</h4>
-                {sk.items.map((it, j) => (
-                  <h5 style={{ margin: "5px" }} key={j}>
-                    {it}
-                  </h5>
-                ))}
-              </div>
-            ))}
-            <h3 className="resume-title">Exams</h3>
-            {Array.from(exams).map((ex, i) => (
-              <div className="resume-item" key={i}>
-                <h4>{ex.title}</h4>
-                <h5>{ex.result}</h5>
-              </div>
-            ))}
+            <Experience />
           </div>
         </div>
       </div>

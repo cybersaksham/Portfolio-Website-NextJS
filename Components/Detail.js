@@ -36,7 +36,9 @@ const Detail = ({ id }) => {
               </div>
             </div>
             <div className="col-lg-4 portfolio-info">
-              <h3>{project.name}</h3>
+              <h3>
+                <b>{project.name}</b>
+              </h3>
               <ul>
                 <li>
                   <strong>Category</strong>: {project.category}
