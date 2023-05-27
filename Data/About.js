@@ -12,7 +12,7 @@ const about = {
   name: "Saksham Bindal",
   about:
     "Full Stack Developer, Flutter App Developer, Blockchain Developer, Competitive Coder, Entrepreneur",
-  bio: "Pursuing B. Tech at MNIT Jaipur in Computer Science Branch. 3rd Year Student.",
+  bio: "Pursuing B. Tech at MNIT Jaipur in Computer Science Branch. 4th Year Student.",
   longBio:
     "I'm a developer with experience in building full-stack websites for individuals and organizations. I also develop flutter android apps. I am expert in Python, CPP, MERN Stack, Next JS, Flask. I am a competitive coder. I develop Web 3.0 Decentralized apps (DApps) based on blockchain technology & ICP (Internet Computer Protocol)",
   city: "Hindaun, Rajasthan, India",
