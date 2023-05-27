@@ -67,17 +67,6 @@ const skills = [
 
 const experience = [
   {
-    title: "Founder & CTO",
-    company: "Plopdop Pvt Ltd",
-    time: "Jan 2023 - Present",
-    points: [
-      "A video streaming platform where creator can start monetizing instantly.",
-      "Creator can also mint their videos into NFT and sell them",
-      "Completely MADE IN INDIA product",
-    ],
-    links: ["https://plopdop.com/"],
-  },
-  {
     title: "Software Engineer Intern",
     company: "Atlassian",
     time: "In summer 2023",
