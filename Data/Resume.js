@@ -3,7 +3,7 @@ const education = [
     title: "B.Tech Computer Science",
     time: "2020 - present",
     from: "Malaviya National Institute of Technology, Rajasthan, India",
-    result: "CGPA: 8.44",
+    result: "CGPA: 8.21",
   },
   {
     title: "Senior Secondary (XII)",
@@ -30,6 +30,7 @@ const skills = [
     title: "Languages",
     items: [
       "Java",
+      "Kotlin",
       "Python",
       "C",
       "CPP",
@@ -45,6 +46,8 @@ const skills = [
     items: [
       "Unix",
       "Git",
+      "Gradle",
+      "Maven",
       "Android Studio",
       "Flutter",
       "AWS",
@@ -57,7 +60,7 @@ const skills = [
   },
   {
     title: "Frameworks",
-    items: ["React JS", "Next JS", "Flask", "Node JS"],
+    items: ["React JS", "Spring Boot", "Next JS", "Flask", "Node JS"],
   },
   {
     title: "Databases",
@@ -69,15 +72,20 @@ const experience = [
   {
     title: "Software Engineer Intern",
     company: "Atlassian",
-    time: "In summer 2023",
+    time: "May 2023 - Jul 2023",
     location: "Remote + Bangalore",
-    points: [],
+    points: [
+      "Worked on common UI components to show information of running migrations.",
+      "Worked on separate micros service to handle AWS tasks.",
+      "Observed pipeline working at different stages.",
+      "Got familiar with Atlassian tools like Jira, Confluence, Bitbucket etc.",
+    ],
     links: [],
   },
   {
     title: "Maths Expert",
     company: "Chegg Inc.",
-    time: "Nov 2022 - Present",
+    time: "Nov 2022 - Mar 2023",
     location: "Remote",
     points: ["Basic maths expert at Chegg Inc.", "Solve math questions daily."],
     links: [],
